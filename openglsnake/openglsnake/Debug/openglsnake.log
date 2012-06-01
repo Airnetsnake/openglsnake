@@ -1,0 +1,21 @@
+﻿Построение начато 01.06.2012 17:41:16.
+     1>Проект "M:\Users\Snake\Прога_2012\openglsnake\openglsnake\openglsnake.vcxproj" в узле 2 (целевые объекты rebuild).
+     1>_PrepareForClean:
+         Файл "Debug\openglsnake.lastbuildstate" удаляется.
+       InitializeBuildStatus:
+         Обращение к "Debug\openglsnake.unsuccessfulbuild".
+       ClCompile:
+         M:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /MP /Od /Oy- /D _CONSOLE /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\explosion.cpp ..\src\gameController.cpp ..\src\opengltest2.cpp ..\src\openglwrapper.cpp ..\src\snake.cpp ..\src\winapiwrapper.cpp
+         explosion.cpp
+         gameController.cpp
+         opengltest2.cpp
+         openglwrapper.cpp
+     1>m:\users\snake\прога_2012\openglsnake\src\explosion.cpp(273): error C3861: glutSolidSphere: идентификатор не найден
+         snake.cpp
+     1>m:\users\snake\прога_2012\openglsnake\src\gamecontroller.cpp(55): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+         winapiwrapper.cpp
+     1>Построение проекта "M:\Users\Snake\Прога_2012\openglsnake\openglsnake\openglsnake.vcxproj" завершено (целевые объекты rebuild) с ошибкой.
+
+СБОЙ построения.
+
+Затраченное время: 00:00:01.91
