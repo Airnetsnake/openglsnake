@@ -403,10 +403,8 @@ namespace GController
 		Vinit[2]=1;
 
 
-		//expl->newExplosion(pos, Vinit);			//
-
-
-
+		expl->newExplosion(pos, Vinit);			//
+		expl -> DrawExplosion(pos);
 		score++;
 	}
 
