@@ -258,7 +258,6 @@ void openglwrapper::setCamera(GLfloat cx, GLfloat cy, GLfloat cz,  GLfloat px, G
 		cx, 
 		cy, 
 		cz,
-
 		px, 
 		py, 
 		pz,    
@@ -325,7 +324,6 @@ void openglwrapper::drawCube(GLfloat x, GLfloat y, GLfloat z)
 
 	glPopMatrix();
 }
-
 
 void openglwrapper::moveSpawn(GLfloat x, GLfloat y, GLfloat z)
 {
