@@ -1,6 +1,6 @@
 #include <iostream>
 #include "gameController.h"
-#include "explosion.h"
+
 
 #define fixedFPS 60
 #define FRAMES_PER_STEP 8 //на отрисовку 1 перемещения тратится 8 кадров
@@ -28,7 +28,7 @@ namespace GController
 				hInstance(hInst),
 				window(0),
 				opengl(0),
-				expl(0),							//новое
+				//expl(0),							//новое
 				frames(0),
 				arrowPressed(false),
 				gamePaused(false),
