@@ -156,11 +156,9 @@ void explosion::newExplosion(float pos[3], float Vinit[3])
 //Updates the explosion
 void explosion::Update(const float& dT, float Gravity[3])
 {
-	int i;
-
 	if (fuel > 0)
 	{
-		for (i = 0; i < NUM_PARTICLES; i++)
+		for (int i = 0; i < NUM_PARTICLES; i++)
 		{
 			particles[i].speed[0] *= frictionCoeff;
 			particles[i].speed[1] -= Gravity[1]*dT;
@@ -189,7 +187,7 @@ void explosion::Update(const float& dT, float Gravity[3])
 			}
 		}
 
-		for (i = 0; i < NUM_DEBRIS; i++)
+		for (int i = 0; i < NUM_DEBRIS; i++)
 		{
 			debris[i].speed[0] *= frictionCoeff;
 			debris[i].speed[1] -= Gravity[1]*dT;

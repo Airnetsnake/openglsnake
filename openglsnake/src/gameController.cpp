@@ -276,6 +276,14 @@ namespace GController
 									direction[Z_] * (float)frames/FRAMES_PER_STEP * ((animooted)?1.0f:0)
 									);	
 
+		float zeroes[3];
+		zeroes[0] = zeroes[1] = zeroes[2] = 3;
+		expl -> DrawExplosion(zeroes);
+		// here will be the explosion
+		// all we have to do is to pass two arguments
+		// don't know which ones yet
+		//expl -> Update();
+
 		//draw snake body
 
 		txyz prev = { playerPos[X_],  playerPos[Y_],  playerPos[Z_]};
@@ -354,7 +362,6 @@ namespace GController
 
 		//wait until fixed frame time is reached
 		float fps = (float)loopTimer.getTicksRate().QuadPart/loopTimer.getTime().QuadPart;
-	
 		if(fps > fixedFPS)
 		{
 			waiter(long(loopTimer.getTicksRate().QuadPart/fixedFPS - loopTimer.getTime().QuadPart));
@@ -382,14 +389,6 @@ namespace GController
 		int ydel = (yr!=0)?(int)rand()%yr:0;
 		int zdel = (zr!=0)?(int)rand()%zr:0;
 
-		/*int xt = -(int)xr/2 + xdel;
-		int yt = -(int)yr/2 + ydel;
-		int zt = -(int)zr/2 + zdel;*/
-
-		//fruitPos[X_] = -(int)xr/2 + xdel;
-		//fruitPos[Y_] = -(int)yr/2 + ydel;
-		//fruitPos[Z_] = -(int)zr/2 + zdel;
-
 		fruitPos[X_] = power(-1, (int)rand()) * xdel;
 		fruitPos[Y_] = power(-1, (int)rand()) * ydel;
 		fruitPos[Z_] = power(-1, (int)rand()) * zdel;
@@ -398,12 +397,9 @@ namespace GController
 		pos[1] = fruitPos[Y_];
 		pos[2] = fruitPos[Z_];
 
-		Vinit[0]=1;									//новое
-		Vinit[1]=1;
-		Vinit[2]=1;
+		Vinit[0]= Vinit[1] = Vinit[2]= 1;
 
-
-		expl->newExplosion(pos, Vinit);			//
+		expl-> newExplosion(pos, Vinit);			//
 		expl -> DrawExplosion(pos);
 		score++;
 	}
@@ -419,6 +415,6 @@ void waiter(long wticks)
 	Timer wtimer;
 	wtimer.start();
 
-	do{} while( wtimer.getTime().QuadPart < wticks );
+	while(wtimer.getTime().QuadPart < wticks );
 
 }
