@@ -10,6 +10,7 @@
 #include "snake.h"
 #include "area.h"
 #include "timer.h"
+#include "explosion.h"
 
 //#define GC_KEYDOWN 1
 //#define GC_KEYUP 2
@@ -35,7 +36,7 @@ namespace GController
 		static gameController *selfptr;
 		winapiwrapper *window;
 		openglwrapper *opengl;
-		explosion *expl;		//новое
+		explosion* expl;		//новое
 		snake *playerSnake;
 		area *curLevel;
 
